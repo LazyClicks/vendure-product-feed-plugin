@@ -1,0 +1,43 @@
+{
+  "name": "@codibri/vendure-product-feed-plugin",
+  "version": "0.0.1",
+  "description": "Vendure plugin to create product feed",
+  "author": "Toon Janssens <toon@codibri.be>",
+  "repository": "https://github.com/Codibri-BV/vendure-product-feed-plugin",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=18.20.7"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "yarn ts-node test/dev-server.ts",
+    "build": "rimraf dist && tsc && copyfiles -u 1 'src/ui/**/*' dist/",
+    "test": "jest --preset=\"ts-jest\""
+  },
+  "dependencies": {
+    "mime-types": "^2.1.35",
+    "ssh2-sftp-client": "^10.0.3",
+    "xmlbuilder2": "^3.1.1"
+  },
+  "devDependencies": {
+    "@micham/sftp-mock-server": "^0.0.6",
+    "@types/jest": "29.4.0",
+    "@types/ssh2-sftp-client": "^9.0.3",
+    "@vendure/admin-ui-plugin": "2.3.3",
+    "@vendure/asset-server-plugin": "2.3.3",
+    "@vendure/core": "2.3.3",
+    "@vendure/testing": "2.3.3",
+    "@vendure/ui-devkit": "2.3.3",
+    "jest": "29.4.3",
+    "rimraf": "^4.1.2",
+    "ts-jest": "29.0.5",
+    "ts-node": "10.9.1",
+    "typescript": "5.4.5"
+  }
+}
