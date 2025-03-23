@@ -17,8 +17,10 @@
   ],
   "scripts": {
     "start": "yarn ts-node test/dev-server.ts",
-    "build": "tsc && copyfiles -u 1 'src/ui/**/*' dist/",
-    "test": "jest --preset=\"ts-jest\""
+    "test": "jest --preset=\"ts-jest\"",
+    "build": "tsc && cp -r src/ui dist",
+    "release": "yarn build && changeset publish",
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "mime-types": "^2.1.35",
