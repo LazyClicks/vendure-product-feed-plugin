@@ -27,13 +27,13 @@ export default addActionBarItem({
       buttonState: (context) => {
         return context.dataService
           .query<{
-            activeChannel: { customFields: { productOutput: string } };
+            activeChannel: { customFields: { productFeedOutput: string } };
           }>(
             gql`
               query {
                 activeChannel {
                   customFields {
-                    productOutput
+                    productFeedOutput
                   }
                 }
               }
@@ -43,7 +43,7 @@ export default addActionBarItem({
             return {
               disabled: false,
               visible:
-                data.activeChannel.customFields.productOutput !=
+                data.activeChannel.customFields.productFeedOutput !=
                 "disabled",
             };
           });
