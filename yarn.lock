@@ -9348,16 +9348,15 @@ sql.js@1.8.0:
   resolved "https://registry.yarnpkg.com/sql.js/-/sql.js-1.8.0.tgz#cb45d957e17a2239662fe2f614c9b678990867a6"
   integrity sha512-3HD8pSkZL+5YvYUI8nlvNILs61ALqq34xgmF+BHpqxe68yZIJ1H+sIVIODvni25+CcxHUxDyrTJUL0lE/m7afw==
 
-ssh2-sftp-client@^10.0.3:
-  version "10.0.3"
-  resolved "https://registry.yarnpkg.com/ssh2-sftp-client/-/ssh2-sftp-client-10.0.3.tgz#aa8f9b875b745a0b6108692f576343437e428a86"
-  integrity sha512-Wlhasz/OCgrlqC8IlBZhF19Uw/X/dHI8ug4sFQybPE+0sDztvgvDf7Om6o7LbRLe68E7XkFZf3qMnqAvqn1vkQ==
+ssh2-sftp-client@^12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/ssh2-sftp-client/-/ssh2-sftp-client-12.0.0.tgz#b76487e5724c4d360ff168967e196670f88bdd9f"
+  integrity sha512-k+ocDsx6N2eDwQlIRwJFa0I1bkQpFPhIc+cv1iplaQaIPXFt9YM1ZnXCJOW4OILS5dzE+12OlhYIF5g0AzgVfg==
   dependencies:
     concat-stream "^2.0.0"
-    promise-retry "^2.0.1"
-    ssh2 "^1.15.0"
+    ssh2 "^1.16.0"
 
-ssh2@^1.11.0, ssh2@^1.15.0:
+ssh2@^1.11.0, ssh2@^1.16.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/ssh2/-/ssh2-1.16.0.tgz#79221d40cbf4d03d07fe881149de0a9de928c9f0"
   integrity sha512-r1X4KsBGedJqo7h8F5c4Ybpcr5RjyP+aWIG007uBPRjmdQWfEiVLzSK71Zji1B9sKxwaCvD8y8cwSkYrlLiRRg==
