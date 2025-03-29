@@ -1,4 +1,3 @@
-import { GoogleProductFeedStrategy } from "./../src/strategy/google-product-feed-strategy";
 import { createSftpMockServer } from "@micham/sftp-mock-server";
 import { AdminUiPlugin } from "@vendure/admin-ui-plugin";
 import { AssetServerPlugin } from "@vendure/asset-server-plugin";
@@ -22,6 +21,7 @@ import { initialData } from "./data/initial-data";
 import {
   ProductFeedPlugin,
   ProductFeedBuilderService,
+  GoogleProductFeedStrategy
 } from "../src";
 
 require("dotenv").config();

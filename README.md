@@ -19,7 +19,7 @@ or
 1. Add the plugin to your VendureConfig plugins array and add `ProductFeedPlugin.ui` to the AdminUi plugin
 
 ```typescript
-import { ProductFeedPlugin } from "@codibri/vendure-product-feed-plugin";
+import { ProductFeedPlugin, GoogleProductFeedStrategy } from "@codibri/vendure-product-feed-plugin";
 
 // ...
 
