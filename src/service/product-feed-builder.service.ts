@@ -45,7 +45,7 @@ export class ProductFeedBuilderService implements OnModuleInit {
     private translator: TranslatorService,
     private productPriceApplicator: ProductPriceApplicator,
     private eventBus: EventBus
-  ) {}
+  ) { }
 
   async onModuleInit() {
     this.jobQueue = await this.jobQueueService.createQueue({
@@ -152,7 +152,11 @@ export class ProductFeedBuilderService implements OnModuleInit {
         })
         .leftJoin("variants.product", "product")
         .leftJoin("product.channels", "channel")
-        .where("channel.id = :channelId", { channelId });
+        .where("channel.id = :channelId", { channelId })
+        .andWhere("product.enabled = :enabled", { enabled: true })
+        .andWhere("variants.enabled = :enabled", { enabled: true })
+        .andWhere("product.deletedAt IS NULL")
+        .andWhere("variants.deletedAt IS NULL");
 
       const count = await qb.getCount();
       Logger.verbose(
@@ -254,7 +258,7 @@ export class ProductFeedBuilderService implements OnModuleInit {
     const stream = await assetStorageStrategy.readFileToBuffer(
       channel.customFields.productFeedFile
     );
-    
+
     return {
       stream,
       fileName: channel.customFields.productFeedFile,
